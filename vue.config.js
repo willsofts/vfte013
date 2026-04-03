@@ -26,15 +26,11 @@ module.exports = defineConfig({
         modules: path.join(__dirname, "node_modules")
       }
     },
-    /*
-    externals: {
-    "./assets/tinymce/js/tinymce/tinymce.js" : "tinymce",
-    "./assets/tinymce/js/tinymce/jquery.tinymce.min.js": "jquery.tinymce",
+  },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'config'),
+      publicPath: '/config' 
     },
-    module: {
-      noParse: (content) => { 
-        return /tinymce/.test(content); 
-      },
-    },*/
   }    
 })
